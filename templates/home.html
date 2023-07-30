@@ -1,0 +1,25 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Home </title>
+{% endblock %}
+
+
+{% block body_block %}
+<center>
+    {% if username %}
+        <h1>WELCOME TO HOME PAGE {{username}} </h1>
+    {% else %}
+        <h1>WELCOME TO HOME PAGE</h1>
+    {% endif %}
+</center>
+<style>
+    body
+    {
+        background-image: url(https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+

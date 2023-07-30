@@ -1,0 +1,37 @@
+{% extends 'dummy.html'%}
+
+
+{% block title %}
+<title>registration</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <form action="" method="POST" enctype="multipart/form-data" class="a">
+        {% csrf_token %}
+        {{umfo.as_p}}
+        {{pmfo.as_p}}
+        <input type="submit" value="registration">
+    </form>
+</center>
+<style>
+    body
+    {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYTgd2Yf6sKu2ZWwN48mMeqz6wriIc9nPjw&usqp=CAU);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .a
+    {
+        background:linear-gradient(45deg,rgb(215, 21, 179),rgb(33, 225, 53));
+        height: fit-content;
+        width: fit-content;
+        border-radius:20px ;
+        padding:20px ;
+    }
+    label
+    {
+        text-decoration: solid;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'dummy.html'%}
+
+{% block titile %}
+<title>User_login</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <form method="POST">
+        {% csrf_token %}
+        <br><br>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username"><br><br>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password"><br><br>
+
+        <input type="submit" value="user_login" class="btn btn-success">
+
+    </form><br>
+
+   <a href="{% url 'reset_password' %}"> <input type="submit" value="reset_password" class="btn btn-warning"></a>
+</center>
+<style>
+    body
+    {
+        background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+        font-size:20px;
+    }
+</style>
+{% endblock %}
